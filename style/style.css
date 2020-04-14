@@ -1,0 +1,796 @@
+/*---FlexBox---*/
+/*---Flexbox Direction---*/
+/*---Flexbox Wrap---*/
+/*---Flexbox Justify Content---*/
+/*---Flexbox Align Items---*/
+/*---Flexbox Align Content---*/
+/*---Placeholder---*/
+@font-face {
+  font-family: ProximaNovaBold;
+  src: url('../fonts/Proxima/ProximaNova-Bold.eot');
+  src: url('../fonts/Proxima/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Proxima/ProximaNova-Bold.woff2') format('woff2'), url('../fonts/Proxima/ProximaNova-Bold.woff') format('woff'), url('../fonts/Proxima/ProximaNova-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: ProximaNovaLight;
+  src: url('../fonts/Proxima/ProximaNova-Light.eot');
+  src: url('../fonts/Proxima/ProximaNova-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Proxima/ProximaNova-Light.woff2') format('woff2'), url('../fonts/Proxima/ProximaNova-Light.woff') format('woff'), url('../fonts/Proxima/ProximaNova-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: OpenSans;
+  src: url('../fonts/OpenSans/OpenSans-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: Arial;
+  src: url('../fonts/Arial/arial.ttf') format('truetype');
+}
+body {
+  margin: 0;
+}
+body .main {
+  background-image: url(../img/clouds-cold-dark-540518.png);
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  padding: 30px 0 0 0;
+}
+body .main header {
+  width: 960px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -moz-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+}
+body .main header .logo_block img {
+  width: 235px;
+  height: 65px;
+}
+body .main header .login_block {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+body .main header .login_block #login {
+  font-size: 13px;
+  line-height: 17px;
+  color: #ffffff;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  width: 80px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: inherit;
+  border: 2px solid #ffffff;
+  transition: all ease-in-out 0.5s;
+  cursor: pointer;
+  outline: none;
+}
+body .main header .login_block #login:hover {
+  filter: drop-shadow(0px 1px 8.5px rgba(43, 160, 234, 0.66));
+  background-image: linear-gradient(29deg, #5865ea 0%, #2b9fea 100%);
+  transition: all ease-in-out 0.5s;
+}
+body .main header .login_block .login_block_inputs {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.55s opacity, 0.55s visibility;
+}
+body .main header .login_block .login_block_inputs .login_email input {
+  width: 200px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: none;
+  transition: 0;
+  cursor: inherit;
+  outline: none;
+  padding: 0 0 0 13px;
+}
+body .main header .login_block .login_block_inputs .login_email input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 0;
+  color: #6e747c;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+}
+body .main header .login_block .login_block_inputs .login_email input:-moz-placeholder {
+  font-size: 14px;
+  line-height: 0;
+  color: #6e747c;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+}
+body .main header .login_block .login_block_inputs .login_email input::-moz-placeholder {
+  font-size: 14px;
+  line-height: 0;
+  color: #6e747c;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+}
+body .main header .login_block .login_block_inputs .login_email input:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 0;
+  color: #6e747c;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+}
+body .main header .login_block .login_block_inputs .login_email .error {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 11px;
+  line-height: 0;
+  color: #ffffff;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  width: 100%;
+  height: 35px;
+  border-radius: 4px;
+  background-color: #e22a32;
+  border: none;
+  transition: 0;
+  cursor: inherit;
+  outline: none;
+  margin: 5px 0 0 0;
+}
+body .main header .login_block .login_block_inputs .login_password {
+  margin: 0 10px 0 10px;
+}
+body .main header .login_block .login_block_inputs .login_password input {
+  width: 200px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: none;
+  transition: 0;
+  cursor: inherit;
+  outline: none;
+  padding: 0 0 0 13px;
+}
+body .main header .login_block .login_block_inputs .login_password input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 0;
+  color: #6e747c;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+}
+body .main header .login_block .login_block_inputs .login_password input:-moz-placeholder {
+  font-size: 14px;
+  line-height: 0;
+  color: #6e747c;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+}
+body .main header .login_block .login_block_inputs .login_password input::-moz-placeholder {
+  font-size: 14px;
+  line-height: 0;
+  color: #6e747c;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+}
+body .main header .login_block .login_block_inputs .login_password input:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 0;
+  color: #6e747c;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+}
+body .main header .login_block .login_block_inputs .login_password .forgot_password {
+  height: 35px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+body .main header .login_block .login_block_inputs .login_password .forgot_password a {
+  font-size: 11px;
+  line-height: 0;
+  color: #ffffff;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+}
+body .main header .login_block .login-open {
+  opacity: 1;
+  visibility: visible;
+}
+body .main .title_steps_block {
+  width: 100%;
+  height: calc(100% - 75px);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+}
+body .main .title_steps_block h1 {
+  text-align: center;
+  font-size: 38px;
+  line-height: inherit;
+  color: #83a6e4;
+  font-family: 'ProximaNovaBold', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+body .main .title_steps_block p {
+  font-size: 38px;
+  line-height: inherit;
+  color: #ffffff;
+  font-family: 'ProximaNovaBold', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+body .main .title_steps_block form {
+  z-index: 9;
+  width: 700px;
+  height: 400px;
+  overflow: hidden;
+  margin: 0 0 7px;
+  position: relative;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: space-between;
+  -moz-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+}
+body .main .title_steps_block form #prev_step {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: 4px;
+  background-color: inherit;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  outline: none;
+}
+body .main .title_steps_block form #prev_step i {
+  border: solid rgba(255, 255, 255, 0.5);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-25%, -50%) rotate(135deg);
+  -webkit-transform: translate(-25%, -50%) rotate(135deg);
+  transition: all 0.2s ease-in-out;
+}
+body .main .title_steps_block form #prev_step:hover {
+  border: 2px solid #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+body .main .title_steps_block form #prev_step:hover i {
+  border: solid #ffffff;
+  border-width: 0 3px 3px 0;
+  transition: all 0.2s ease-in-out;
+}
+body .main .title_steps_block form .next_step {
+  display: none;
+  width: 120px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: inherit;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  outline: none;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 700;
+  background-image: linear-gradient(29deg, #5865ea 0%, #2b9fea 100%);
+}
+body .main .title_steps_block form .next_step span {
+  margin: 0 15px 0 0;
+}
+body .main .title_steps_block form .next_step i {
+  border: solid #ffffff;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  width: 4px;
+  height: 4px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+body .main .title_steps_block form .next_step:hover {
+  filter: drop-shadow(0px 1px 8.5px rgba(43, 160, 234, 0.66));
+  transition: all 0.2s ease-in-out;
+}
+body .main .title_steps_block form .submit {
+  display: none;
+  width: 120px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: inherit;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  outline: none;
+  background-image: linear-gradient(29deg, #4baf4f 0%, #3bd341 100%);
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 700;
+}
+body .main .title_steps_block form .submit span {
+  margin: 0 15px 0 0;
+}
+body .main .title_steps_block form .submit i {
+  border: solid #ffffff;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  width: 4px;
+  height: 9px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  margin: 0 0 10px 0;
+}
+body .main .title_steps_block form .submit:hover {
+  filter: drop-shadow(0px 1px 8.5px rgba(76, 175, 80, 0.66));
+  transition: all 0.2s ease-in-out;
+}
+body .main .title_steps_block form .last_step {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+body .main .title_steps_block form .steps_block {
+  position: relative;
+  font-size: 30px;
+  width: 360px;
+  height: 100%;
+}
+body .main .title_steps_block form .steps_block .step {
+  color: #ffffff;
+  position: absolute;
+  opacity: 0;
+  border-radius: 4px;
+  background-color: rgba(225, 230, 235, 0.5);
+  width: 100%;
+  height: 90px;
+  z-index: -1;
+}
+body .main .title_steps_block form .steps_block .step .title {
+  margin: 0;
+  font-size: 14px;
+  line-height: 14px;
+  color: #ffffff;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 700;
+  height: calc(100% - 55px);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+body .main .title_steps_block form .steps_block .step .dropdown,
+body .main .title_steps_block form .steps_block .step .step_input {
+  margin: -4px auto;
+  width: 98%;
+  height: 55px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  transition: all ease-in-out 0.5s;
+  position: relative;
+  outline: none;
+}
+body .main .title_steps_block form .steps_block .step .dropdown .select,
+body .main .title_steps_block form .steps_block .step .step_input .select {
+  height: 100%;
+  cursor: pointer;
+  display: block;
+  font-size: 18px;
+  line-height: 0;
+  color: #6e747c;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+body .main .title_steps_block form .steps_block .step .dropdown .select span,
+body .main .title_steps_block form .steps_block .step .step_input .select span {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 100%;
+}
+body .main .title_steps_block form .steps_block .step .dropdown .select .triangle,
+body .main .title_steps_block form .steps_block .step .step_input .select .triangle {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #6e747c;
+  position: absolute;
+  right: 20px;
+  transition: all 0.2s ease-in-out;
+}
+body .main .title_steps_block form .steps_block .step .dropdown .select .rotate,
+body .main .title_steps_block form .steps_block .step .step_input .select .rotate {
+  transform: rotate(180deg);
+  transition: all 0.2s ease-in-out;
+}
+body .main .title_steps_block form .steps_block .step .dropdown .dropdown-menu,
+body .main .title_steps_block form .steps_block .step .step_input .dropdown-menu {
+  position: absolute;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 0;
+  border-radius: 4px;
+  display: none;
+  z-index: 9;
+  margin: 0;
+  list-style: none;
+}
+body .main .title_steps_block form .steps_block .step .dropdown .dropdown-menu li,
+body .main .title_steps_block form .steps_block .step .step_input .dropdown-menu li {
+  padding: 10px;
+  cursor: pointer;
+}
+body .main .title_steps_block form .steps_block .step .dropdown .dropdown-menu li:hover p,
+body .main .title_steps_block form .steps_block .step .step_input .dropdown-menu li:hover p,
+body .main .title_steps_block form .steps_block .step .dropdown .dropdown-menu li:active p,
+body .main .title_steps_block form .steps_block .step .step_input .dropdown-menu li:active p {
+  width: 332px;
+  border-radius: 4px;
+  background-color: #e2e2e2;
+  margin: 0 auto;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+body .main .title_steps_block form .steps_block .step .dropdown .dropdown-menu li p,
+body .main .title_steps_block form .steps_block .step .step_input .dropdown-menu li p {
+  height: 30px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: inherit;
+  color: #6e747c;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  transition: all 0.2s ease-in-out;
+}
+body .main .title_steps_block form .steps_block .step .step_input {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border: none;
+  font-size: 18px;
+  line-height: 0;
+  color: #6e747c;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+body .main .title_steps_block form .steps_block .step .under_input {
+  font-size: 11px;
+  line-height: 16px;
+  color: #ffffff;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  opacity: 0.5;
+  padding: 20px 0 0 0;
+}
+body .main .title_steps_block form .steps_block .step .error {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: inherit;
+  color: #ffffff;
+  font-family: "OpenSans", sans-serif;
+  font-weight: 700;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #e22a32;
+  margin: 20px 0 0 0;
+  text-align: center;
+}
+body .main .title_steps_block form .steps_block .step .error_none {
+  display: none;
+}
+body .main .title_steps_block form .steps_block .active {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+body .main .title_steps_block form .nav {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  left: 15px;
+  bottom: 12px;
+}
+body .main .title_steps_block form .nav span {
+  opacity: 0.9;
+  border: 2px solid #ffffff;
+  margin: 0 8px 0 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 8px;
+}
+body .main .title_steps_block form .nav .on {
+  background: #ffffff;
+}
+@media (max-width: 992px) {
+  body .main header {
+    width: 100%;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  body .main header .login_block {
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -ms-flex-align: flex-end;
+    -webkit-box-align: flex-end;
+    -moz-box-align: flex-end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+  }
+  body .main header .login_block .login_block_inputs {
+    margin: 10px 0 0 0;
+  }
+  body .main header .login_block .login_block_inputs .login_password {
+    margin: 0 0 0 10px;
+  }
+  body .main .title_steps_block {
+    height: auto;
+  }
+  body .main .title_steps_block h1,
+  body .main .title_steps_block p {
+    font-size: 28px;
+  }
+}
+@media (max-width: 768px) {
+  body .main header {
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  body .main header .login_block .login_block_inputs .login_email input,
+  body .main header .login_block .login_block_inputs .login_password input {
+    width: auto;
+  }
+  body .main .title_steps_block {
+    width: 90%;
+    margin: 0 auto;
+  }
+  body .main .title_steps_block form {
+    width: 100%;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  body .main .title_steps_block form .nav {
+    position: inherit;
+  }
+}
+@media (max-width: 768px) {
+  body .main {
+    height: auto;
+  }
+  body .main header form {
+    width: 90%;
+    margin: 0 auto;
+  }
+  body .main header form .login_block_inputs {
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 100%;
+  }
+  body .main header form .login_block_inputs .login_email {
+    width: 100%;
+  }
+  body .main header form .login_block_inputs .login_email input {
+    width: 100%!important;
+    box-sizing: border-box;
+  }
+  body .main header form .login_block_inputs .login_password {
+    width: 100%;
+    margin: 0!important;
+  }
+  body .main header form .login_block_inputs .login_password input {
+    width: 100%!important;
+    margin: 10px 0 0 0;
+    box-sizing: border-box;
+  }
+  body .main .title_steps_block form {
+    min-height: 600px;
+    height: 100%;
+  }
+  body .main .title_steps_block form .steps_block {
+    width: 100%;
+    height: 90px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

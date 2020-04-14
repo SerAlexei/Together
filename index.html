@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style/style.css"/>
+    <script src="script/jQuery.js"></script>
+    <script src="script/script.js"></script>
+<!--    <script src="script/login.js"></script>-->
+    <script src="script/registration.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div class="main">
+    <header>
+        <div class="logo_block"><img src="img/logo.png" alt=""></div>
+        <form class="login_block">
+            <div class="login_block_inputs">
+                <div class="login_email">
+                    <input id="login_email" type="text" placeholder="Email">
+                    <div class="error">Please enter a valid email address</div>
+                </div>
+                <div class="login_password">
+                    <input id="login_password" type="text" placeholder="Password">
+                    <div class="forgot_password"><a href="#">
+                        Forgot your password?
+                    </a></div>
+                </div>
+            </div>
+            <button type="button" id="login">Log in</button>
+        </form>
+    </header>
+    <div class="title_steps_block">
+        <h1>StarCompany DESIGNS, MANUFACTURES AND</h1>
+        <p>Launches Advanced Rockets and Spacecrafts</p>
+        <form>
+            <button type="button" id="prev_step"><i></i></button>
+            <div class="steps_block">
+                <div class="step active">
+                    <div class="title">Who are you</div>
+                    <div class="dropdown">
+                        <div class="select">
+                            <span>Engineer<span class="triangle"></span></span>
+                        </div>
+                        <input type="hidden" name="profession">
+                        <ul class="dropdown-menu">
+                            <li><p>Engineer</p></li>
+                            <li><p>Business Development Executive</p></li>
+                            <li><p>Office Manager/PA</p></li>
+                            <li><p>Accounttant</p></li>
+                            <li><p>VR Designer</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="title">What is your age&</div>
+                    <div class="dropdown">
+                        <div class="select">
+                            <span>18<span class="triangle"></span></span>
+                        </div>
+                        <input type="hidden" name="age">
+                        <ul class="dropdown-menu">
+                            <li><p>18</p></li>
+                            <li><p>19</p></li>
+                            <li><p>20</p></li>
+                            <li><p>21</p></li>
+                            <li><p>22</p></li>
+                        </ul>
+                    </div>
+                    <div class="error error-age error_none"></div>
+                </div>
+                <div class="step">
+                    <div class="title">I am from</div>
+                    <input class="step_input" type="text" name="from" placeholder="New Roads, 70760">
+                    <div class="error error-location error_none"></div>
+                    <div class="under_input">E.g.: New Roads or 70760<br> We don’t use postal addresses to contact members directly!</div>
+
+                </div>
+                <div class="step">
+                    <div class="title">Your email adress</div>
+                    <input class="step_input" type="text"  name="email" placeholder="Input your email">
+                    <div class="error error-email error_none"></div>
+                </div>
+                <div class="step">
+                    <div class="title">Create your password</div>
+                    <input class="step_input" type="password" name="password" placeholder="Input your password">
+                    <div class="error error-password error_none"></div>
+                    <div class="under_input">By clicking the button above you agree to our Terms of Use and Privacy Policy
+                     including use of cookies and to receive newsletters, account updates and offers sent by StarCompany</div>
+                </div>
+            </div>
+            <button type="button" id="next_step" class="next_step last_step"> <span>Next step</span><i></i></button>
+            <button type="submit" id="submit" class="submit"><span>Start now</span><i></i></button>
+            <div class='nav'></div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
